@@ -1,0 +1,266 @@
+1. List all the DOM objects names below.
+
+A)	 The DOM objects are: 
+
+	1.Document.
+
+	2.Element.
+
+	3.Attribute
+
+	4.Event.
+
+	5.Style.
+
+2. List all the BOM objects names below.
+
+A)	The BOM Objects are:
+
+	1.Navigator.	
+
+	2.History.
+
+	3.Window.
+
+	4.Location.
+
+	5.Screen.	
+
+
+3.1. Find out most commonly used functions(minimum 4) of "document" object and write their purpose with a code snippet which proves the purpose.
+
+A)	1.getElementById()
+
+	  The getElementById() method returns the element that has the ID attribute with the specified value.
+
+	  	eg:-
+			function myFunction() {
+
+	   		document.getElementById("demo").innerHTML = "Hello World";
+
+	2.addEventListener()
+
+	   The document.addEventListener() method attaches an event handler to the document.
+
+		eg:-
+			<script>
+
+				document.addEventListener("click", function(){
+
+	    			document.getElementById("demo").innerHTML = "Hello World!";
+
+				});
+
+		</script>
+
+
+
+	3.getElementsByClassName()
+
+	  The getElementsByClassName() method returns a collection of all elements in the document with the specified class name, as a NodeList object.
+
+		eg:-
+			<script>
+
+				function myFunction() {
+
+		    		var x = document.getElementsByClassName("example");
+
+		    		x[0].innerHTML = "Hello World!";
+
+			}
+
+			</script>
+
+	4.write()
+
+	  The write() method writes HTML expressions or JavaScript code to a document.
+
+		eg:-
+			<script>
+
+				document.write("Hello World!");
+
+			</script>
+
+3.2. Find out most commonly used functions(minimum 4) of "window" object and write their purpose with a code snippet which proves the purpose.
+
+A)	1.window.open()
+
+	  The open() method opens a new browser window.
+		eg:-
+
+			<script>
+
+				function myFunction() {
+
+    				window.open("https://www.w3schools.com");
+				}
+			</scrpit>
+
+	2.window.close()
+
+	  The close() method closes the current window.
+		eg:-	
+			<script>
+
+				var myWindow;
+
+				function openWin() {
+
+    				myWindow = window.open("", "myWindow", "width=200,height=100");
+
+    				myWindow.document.write("<p>This is 'myWindow'</p>");
+
+				}
+
+
+
+				function closeWin() {
+
+   		 		myWindow.close();
+
+				}
+
+			</script>
+
+		
+
+	3.window.moveTo()
+
+	  The moveTo() method moves a window's left and top edge to the specified coordinates.
+
+		 myWindow.moveTo(1000, 100);
+
+	4.window.resizeTo()
+
+	  The resizeTo() method resizes a window to the specified width and height.
+
+		 myWindow.resizeTo(250, 250);
+
+
+
+
+
+
+4. Create an HTML page with a button on it, when the button is clicked, it should display an alert box with text "Hello World"
+
+A)<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alert</title>
+    <script>
+        function alert1(){
+            window.alert("HELLO WORLD");
+        }
+    </script>
+</head>
+<body>
+    <button onclick="alert1()">ALERT!</button>
+</body>
+</html>
+
+
+
+5.	Create an HTML page with a button on it, when the button is clicked, it should display the text "Hello World" on the page.
+	NOTE: The buttton might have gone after text appears.
+
+A)<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hidden</title>
+	<script>
+                function my1(){
+                    document.getElementById("hide").innerHTML="HELLO WORLD";
+                          }
+         </script>
+</head>
+<body>
+         <p id="hide"><button onclick="my1()">HIDE ME!</button></p>
+</body>
+</html>
+
+
+
+6)	Create an HTML page with a button on it, when the button is clicked, it should display the text "Hello World" on the page, just below the button.
+	NOTE: This time the button should not go off, it is still visible and present on the page.
+
+A)<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Unhidden</title>
+    <script>
+            function my1(){
+                document.getElementById("hide").innerHTML="HELLO WORLD";
+                      }
+        </script>
+</head>
+<body>
+        <button onclick="my1()">HIDE ME!</button>  
+        <p id="hide"></p>
+</body>
+</html>
+
+
+
+
+7)	Create an HTML Page with a textbox and a button, write anything in the text box and click on the button,
+ 	Onclick of the button it should display the text on the alert box that was entered in the textbox?
+
+A)html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+            function textd(){
+                var x= document.getElementById("myText");
+                window.alert(x.value);
+            }
+        </script>
+</head>
+<body>
+    Name: <input type="text" id="myText">
+    <button onclick="textd()">TRY it</button>
+    <p id="demo"></p>
+    
+</body>
+</html>
+
+
+
+
+8)	Create an HTML Page with a textbox and a button, write anything in the text box and click on the button,
+ 	Onclick of the button it should display the text just below the textbox on the webpage that was entered in the textbox.
+
+A)<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+            function textd(){
+                var x= document.getElementById("myText").value;
+                document.getElementById("demo").innerHTML=x;
+            }
+        </script>
+</head>
+<body>
+    Name: <input type="text" id="myText">
+    <button onclick="textd()">TRY it</button>
+    <p id="demo"></p>
+    
+</body>
+</html>
